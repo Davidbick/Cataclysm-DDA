@@ -4,6 +4,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "chili powder" },
+    "calories": 9,
     "description": "Chili P, yo!  Not edible on its own, but it could be used to make seasoning.",
     "color": "red"
   },
@@ -12,6 +13,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "garlic powder" },
+    "calories": 9,
     "description": "Garlic that has been dehydrated and ground into a powder.  A must-have seasoning in any pantry.",
     "weight": "1 g",
     "color": "white"
@@ -49,6 +51,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "curry powder" },
+    "calories": 9,
     "description": "A blend of spices meant to be used in some South Asian dishes.  Can't be eaten raw, why would you even try that?",
     "color": "red"
   },
@@ -57,6 +60,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "black pepper" },
+    "calories": 9,
     "description": "Ground black spice berries with a pungent aroma.",
     "color": "dark_gray"
   },
@@ -65,6 +69,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "spicebush berries" },
+    "calories": 9,
     "description": "Small, red berries with a pungent aroma.  It is said they are comparable to allspice, but also boasting their own flavor profile.",
     "smoking_result": "spicebush_berries_smoked",
     "spoils_in": "4 days",
@@ -76,6 +81,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "dry spicebush berries" },
+    "calories": 9,
     "description": "These formerly red berries now have a stronger aroma after being dehydrated.",
     "color": "brown"
   },
@@ -84,6 +90,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "salt" },
+    "calories": 9,
     "description": "Yuck!  You surely wouldn't want to eat this.  It's good for preserving meat and cooking, though.",
     "material": [ "salt" ],
     "color": "white"
@@ -93,6 +100,7 @@
     "copy-from": "spice",
     "type": "COMESTIBLE",
     "name": { "str_sp": "Italian seasoning" },
+    "calories": 9,
     "description": "A fragrant mix of dried oregano, basil, thyme and other spices.",
     "color": "green"
   },
@@ -101,6 +109,7 @@
     "copy-from": "salt",
     "type": "COMESTIBLE",
     "name": { "str_sp": "seasoned salt" },
+    "calories": 9,
     "description": "Salt mixed with a fragrant blend of secret herbs and spices.",
     "material": [ "salt" ],
     "color": "brown"
@@ -199,6 +208,7 @@
     "type": "COMESTIBLE",
     "name": { "str_sp": "mustard powder" },
     "description": "A fragrant yellow powder.  Not edible in this form.",
+    "calories": 9,
     "color": "yellow"
   },
   {
@@ -208,6 +218,6 @@
     "name": { "str_sp": "artificial sweetener" },
     "description": "Sweet, sweet sugar?  No, it is bitter-sweet artificial sweetener.  No calories, no worries.",
     "material": [ "powder" ],
-    "calories": 0
+    "calories": 9
   }
 ]

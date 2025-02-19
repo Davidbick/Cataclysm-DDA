@@ -283,6 +283,38 @@ TEST_CASE( "fun_for_cat_food", "[fun_for][food][cat][feline]" )
     }
 }
 
+
+TEST_CASE( "fun_for_spice", "[fun_for][food][spice][slime]" )
+{
+    avatar dummy;
+    dummy.set_body();
+    std::pair<int, int> actual_fun;
+
+    GIVEN( "artificial_sweetener" ) {
+        item artificial_sweetener( itype_artificial_sweetener );
+        REQUIRE( artificial_sweetener.is_comestible() );
+        REQUIRE( artificial_sweetener.has_flag( flag_SLIME ) );
+
+        WHEN( "character is not slime" ) {
+            REQUIRE_FALSE( dummy.has_trait( trait_AMORPHOUS ) );
+            THEN( "they dislike spice" ) {
+                actual_fun = dummy.fun_for( artificial_sweetener );
+                CHECK( actual_fun.first < 0 );
+            }
+        }
+
+        WHEN( "character is slime" ) {
+            dummy.toggle_trait( trait_AMORPHOUS );
+            REQUIRE( dummy.has_trait( trait_AMORPHOUS ) );
+
+            THEN( "they like spice" ) {
+                actual_fun = dummy.fun_for( artificial_sweetener );
+                CHECK( actual_fun.first > 0 );
+            }
+        }
+    }
+}
+
 TEST_CASE( "fun_for_dog_food", "[fun_for][food][dog][lupine]" )
 {
     avatar dummy;

@@ -1848,6 +1848,10 @@
     "type": "json_flag"
   },
   {
+    "id": "SLIME",
+    "type": "json_flag"
+  },
+  {
     "id": "SLOW_WIELD",
     "type": "json_flag"
   },

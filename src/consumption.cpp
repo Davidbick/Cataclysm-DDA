@@ -548,7 +548,8 @@ std::pair<int, int> Character::fun_for( const item &comest, bool ignore_already_
         ( comest.has_flag( flag_MOUSE ) && has_trait( trait_THRESH_MOUSE ) ) ||
         ( comest.has_flag( flag_RAT ) && has_trait( trait_THRESH_RAT ) ) ||
         ( comest.has_flag( flag_BIRD ) && has_trait( trait_THRESH_BIRD ) ) ||
-        ( comest.has_flag( flag_FELINE ) && has_trait( trait_THRESH_FELINE ) ) ) {
+        ( comest.has_flag( flag_FELINE ) && has_trait( trait_THRESH_FELINE ) ) ||
+        (comest.has_flag( flag_SLIME ) && has_trait( trait_AMORPHOUS ) ) ) {
         if( fun < 0 ) {
             fun = -fun;
             fun /= 2;
@@ -826,12 +827,13 @@ ret_val<edible_rating> Character::can_eat( const item &food ) const
             ( food.has_flag( flag_RABBIT ) && has_trait( trait_THRESH_RABBIT ) ) ||
             ( food.has_flag( flag_MOUSE ) && has_trait( trait_THRESH_MOUSE ) ) ||
             ( food.has_flag( flag_RAT ) && has_trait( trait_THRESH_RAT ) ) ||
-            ( food.has_flag( flag_BIRD ) && has_trait( trait_THRESH_BIRD ) );
+            ( food.has_flag( flag_BIRD ) && has_trait( trait_THRESH_BIRD ) ||
+            ( food.has_flag( flag_SLIME ) && has_trait( trait_AMORPHOUS ));
         if( !has_compatible_mutation ) {
             return ret_val<edible_rating>::make_failure( _( "That doesn't look edible to you." ) );
         }
         if( !food.has_flag( flag_CATTLE ) && !food.has_flag( flag_FELINE ) &&
-            !food.has_flag( flag_LUPINE ) && !food.has_flag( flag_BIRD ) ) {
+            !food.has_flag( flag_LUPINE ) && !food.has_flag( flag_BIRD ) && !food.has_flag(flag_SLIME)) {
             return ret_val<edible_rating>::make_failure( _( "That doesn't look edible." ) );
         }
     }
